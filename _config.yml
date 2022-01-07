@@ -55,9 +55,9 @@ menu:
   - title:             Study
     url:               /study/
     submenu:
-      - title:             Java
-        url:               /java/
-      - title:          C
+      - title:         Java
+        url:           /java/
+      - title:         C
         url:           /clanguage/
       
 

@@ -28,7 +28,7 @@ sitemap: false
 # Study
 
 * [Java]{:.heading.flip-title} --- Java 자료
-* [C]{:.heading.flip-title} --- C 자료
+* [C]{:.heading.flip-title} --- C언어 자료
 
 [Java]: /java/
 [C]: /clanguage/
