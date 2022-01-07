@@ -50,10 +50,17 @@ author:
 menu:
   - title:             About
     url:               /about/
-  - title:             Projects
-    url:               /projects/
-  - title:             Studies
-    url:               /studies/
+  - title:             Project
+    url:               /project/
+  - title:             Study
+    url:               /study/
+    submenu:
+      - title:             Java
+        url:               /java/
+      - title:          C
+        url:           /c/
+      
+
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..

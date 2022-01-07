@@ -3,10 +3,15 @@
 layout: list
 
 # The title of the tag's page.
-title: Projects
+bigtitle: Study
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: projects
+slug: study
+
+# sub menu
+
+menu: true
+submenu: true
 
 # (Optional) Write a short (~150 characters) description of this featured tag.
 description: >
@@ -20,3 +25,11 @@ description: >
 # DON'T USE THIS SETTING IN YOUR CATEGORIES!
 sitemap: false
 ---
+
+# categories
+
+* [Java]{:.heading.flip-title} --- Java
+* [C]{:.heading.flip-title} --- C
+
+[Java]: /java/
+[C]: /c/
