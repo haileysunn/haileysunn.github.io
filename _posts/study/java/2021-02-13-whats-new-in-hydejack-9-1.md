@@ -2,118 +2,488 @@
 layout: post
 title: Hydejack, Stripe-ified
 image: /assets/img/blog/jj-ying.jpg
-accent_image: 
+accent_image:
   background: url('/assets/img/blog/jj-ying.jpg') center/cover
   overlay: false
 accent_color: '#ccc'
 theme_color: '#ccc'
 description: >
-  Version 9.1 provides minor design changes, new features, and closes multiple issues.
+  마크다운 문법 정리 자료
 invert_sidebar: true
 categories:
  - study
  - java
 ---
 
-# What's New in Hydejack 9.1?
+# 마크다운 문법
 
-What's New in Hydejack 9.1?
-
-* toc
-{:toc}
+Markdown writing rules
 
 
-## Stripe-ified Design
-Most elements now have rounded borders, making the design look more modern (dare I say "Stripe-ified") than ever before. 
+# 마크다운 기초 설명
 
-The goal of Hydejack was always to provide a theme that looks "designed" combined the amenities of a typical Jekyll theme for coders.
-This is an important step in maintaining this goal.
+## 마크다운이란?
 
-At the same time, I'm introducing nerdy elements like [breadcrumbs](#serp-breadcrumbs), that are almost ornamental in nature.
-You wouldn't find these on other Stripe-like designs, but I think they are appealing to developer types like myself. 
-Like most additions to Hydejack, they can be disabled via configuration. 
+Markdown은 텍스트 기반의 마크업언어로 2004년 존그루버에 의해 만들어졌으며 쉽게 쓰고 읽을 수 있으며 HTML로 변환이 가능하다. 특수기호와 문자를 이용한 매우 간단한 구조의 문법을 사용하여 웹에서도 보다 빠르게 컨텐츠를 작성하고 보다 직관적으로 인식할 수 있다. 마크다운이 최근 각광받기 시작한 이유는 깃헙(https://github.com) 덕분이다. 깃헙의 저장소Repository에 관한 정보를 기록하는 README.md는 깃헙을 사용하는 사람이라면 누구나 가장 먼저 접하게 되는 마크다운 문서였다. 마크다운을 통해서 설치방법, 소스코드 설명, 이슈 등을 간단하게 기록하고 가독성을 높일 수 있다는 강점이 부각되면서 점점 여러 곳으로 퍼져가게 된다.
 
+## 마크다운의 장단점
 
-## Inverted Sidebars
-The colors on the sidebar can now be inverted to allow brighter sidebar images. This can be enabled per-page in the fort matter:
+### 장점
 
-```yml
-invert_sidebar: true
-```
-
-
-## Code Block Headers
-Code blocks can now have headers:
-
-~~~js
-// file: 'hello-world.js'
-console.log('Hello World!');
+~~~
+1. 간결하다.
+2. 별도의 도구없이 작성이 가능하다.
+3. 다양한 형태로 변환이 가능하다.
+4. 텍스트로 저장되기 때문에 용량이 적어 보관이 용이하다.
+5. 텍스트파일이기 때문에 버전관리시스템을 이용하여 변경이력을 관리할 수 있다.
+6. 지원하는 프로그램과 플랫폼이 다양하다.
 ~~~
 
-Headers are added by making the first line a comment of the form `(file|title): ['"].*['"]`, e.g.:
+### 단점
 
-    ~~~js
-    // file: 'hello-world.js'
-    console.log('Hello World!');
-    ~~~
-    
-Code blocks with and without headers now also come with a copy button. 
-In the case of header-less code blocks, the button only shows on hover to prevent potential overlap.
+~~~
+1. 표준이 없다.
+2. 표준이 없기 때문에 도구에 따라 변환방식이나 생성물이 다르다.
+3. 모든 HTML 마크업을 대신하지 못한다.
+~~~
 
+## 마크다운 문법
 
-## Resume Download Buttons
-Resumes can now have download buttons:
-
-![Download Buttons](/assets/img/blog/9.1.0-3.png){:.border.lead width="1776" height="258" loading="lazy"}
-
-Resumes can now have download buttons.
-{:.figcaption}
-
-The documentation has been updated with a chapter on [how to configure the buttons](/docs/basics/#downloads).
+지금 위에서 설명한것만으로 벌써 마크다운의 문법을 사용하였다.  
+사용한것부터 시작하여 마크다운 문법을 봐보자.
 
 
-## SERP Breadcrumbs
-Added breadcrumbs above page title:
+### 1. 헤더
 
-![Breadcrumbs](/assets/img/blog/9.1.0-2.png){:.border.lead width="1588" height="164" loading="lazy"}
+위에서 장단점을 설명할때 이미 다양한 헤더를 사용하였다.
 
-Bread crumbs are now shown above each page title.
-{:.figcaption}
+~~~
+# this is a h1
+## this is a h2
+### this is a h3
+#### this is a h4
+##### this is a h5
+###### this is a h6
+~~~
 
-Note that this requires a [directory-like URL structure](https://qwtel.com/posts/software/urls-are-directories/) on your entire site, 
-otherwise the intermediate links will point to nonexisting sites.
+🔍 **결과**
 
-On a side note, Hydejack now has built-in tooltips for abbreviations like SERP (activated via tap/click).
-See [Example Content](/blog/hyde/2012-02-07-example-content/#inline-html-elements) on how to add them to your content.
-
-
-## Last Modified At
-Blog posts can now have a "last modified at" date in the sub title row.
-
-![Last modified at](/assets/img/blog/9.1.0-1.png){:.border.lead width="1254" height="218" loading="lazy"}
-
-Note that this depends on the `last_modified_at` property of the page, which must be either set manually in the frontmatter (not recommended), or via a plugin like [`jekyll-last-modified-at`](https://github.com/gjtorikian/jekyll-last-modified-at). Note that the later is not available when building on GitHub Pages and can increase build times.
+# this is a h1
+## this is a h2
+### this is a h3
+#### this is a h4
+##### this is a h5
+###### this is a h6
 
 
-## Clap Button Preview
-I've been trying something new with [**getclaps.app**](https://getclaps.app/), a feedback and analytics tool for personal sites like those powered by Hydejack. 
+### 2. 코드블럭
 
-<!-- <clap-button style="--clap-button-color:var(--body-color);margin:2rem auto 3rem;width:3rem;height:3rem;font-size:smaller" nowave></clap-button> -->
+위에서 장단점을 설명할때 사용한 박스를 4가지 방식을 사용하여 나타내본다.
 
-It is a separate product from Hydejack and not enabled by default. Because it depends on a backend component, it requires a monthly fee. 
-If enabled, it is placed below posts and pages where the dingbat character (❖) used to be.
+1. ```<pre><code>```
+2. <code>```</code> 또는 <code>~~~</code>
+3. 들여쓰기
+4. 언어별 코드블럭
 
-I can't claim that this product is fully baked (feedback welcome), but I've been using it on my personal site and here for the last couple of months with no issues.
-For more, see [the dedicated website](https://getclaps.app/).
+**2.1 ```<pre><code>``` 사용**
+
+~~~
+<pre>
+<code>
+def func(a,b):
+    return a+b
+
+print(func(2,3))
+</code>
+</pre>
+~~~
+
+> 🔍 **결과**
+
+<pre>
+<code>
+def func(a,b):
+    return a+b
+
+print(func(2,3))
+</code>
+</pre>
+
+**2.3 들여쓰기 사용**
+
+탭이나 스페이스 4번을 통해 코드블럭을 만들수 있다.
+
+~~~
+    def func(a,b):
+        return a+b
+
+    print(func(2,3))
+~~~
+
+
+
+> 🔍 **결과**
+
+    def func(a,b):
+        return a+b
+
+    print(func(2,3))
+
+
+**2.4 언어별 코드블럭 사용**
+
+python
+
+<pre>
+<code>
+~~~python
+def func(a,b):
+    return a+b
+
+print(func(a,b))
+~~~
+</code>
+</pre>
+
+> 🔍 **결과**
+
+~~~python
+def func(a,b):
+    return a+b
+
+print(func(a,b))
+~~~
+
+- 그밖에 언어들  
+    - Bash (bash)
+    - C# (cs)
+    - CSS (css)
+    - Diff (diff)
+    - HTML, XML (html)
+    - Ini (ini)
+    - JSON (json)
+    - Java (java)
+    - JavaScript (javascript)
+    - PHP (php)
+    - Perl (perl)
+    - Python (python)
+    - Ruby (ruby)
+    - SQL (sql)
+
+### 3. BlockQuote (인용문)
+
+~~~
+> This is a first blockquote
+~~~
+
+> This is a first blockquote
+
+~~~
+>> This is a second blockquote
+~~~
+
+>> This is a second blockquote
+
+~~~
+>>> This is a third blockquote
+~~~
+
+>>> This is a third blockquote
+
+
+**blockquote 안에 다른 마크다운 요소를 포함할 수 있다.**
+
+~~~
+> ## This is a h3
+> * list1
+> * list2
+>   ~~~
+>   code
+>   ~~~
+~~~
+
+> 🔍 **결과**
+
+> ## This is a h3
+> * list1
+> * list2
+>   ~~~
+>   code
+>   ~~~
+
+### 4. 글머리 기호
+
+~~~
++ 글머리
+  + 글머리2
+    + 글머리3
+      + 글머리 4
+~~~
+
+> 🔍 **결과**
+
++ 글머리
+  + 글머리2
+    + 글머리3
+      + 글머리 4
+
+### 5. 강조
+
+~~~
+*single asterisks*  
+_single underscores_  
+**double asterisks**  
+__double underscores__  
+~~cancelline~~  
+~~~
+
+> 🔍 **결과**
+
+*single asterisks*  
+_single underscores_  
+**double asterisks**  
+__double underscores__  
+~~cancelline~~  
+
+### 6. 기호표시
+
+Markdown에서 이미 사용되는 기호 표기하기
+
+Markdown 문법에 사용되는 기호를 있는 그대로 표시하고 싶을 경우가 있다.  
+예를 들어 \#을 기호 그대로 사용하고 싶지만 그냥 쓰면 H1 헤더로 출력된다.  
+그런 기호들을 아래에 표기하였다.
+
+~~~
+\   backslash
+*   asterisk
+_   underscore
+{}  curly braces
+[]  square brackets
+()  parentheses
+#   hash mark
++   plus sign
+-   minus sign (hyphen)
+.   dot
+!   exclamation mark
+~~~
+
+이런것들을 사용하고 싶다면 기호앞에 \\(=back slash)를 붙혀주면 된다.  
+
+예 :
+\\
+\*
+\_
+\{\}
+\[\]
+\(\)
+\#
+\+
+\-
+\.
+\!
+
+
+### 7. 수평
+
+~~~
+* * *
 
 ***
-{:style="margin:2rem 0"}
 
-There are many more changes and bugfixes in 9.1. See the [CHANGELOG](/changelog/){:.heading.flip-title} for details.
+*****
+
+----
+
+- - -
+~~~
+
+> 🔍 **결과**
+
+* * *
+
+***
+
+*****
+
+----
+
+- - -
+
+### 8. 링크
+
+- 외부 링크   
+[링크 키워드](링크 주소)
+~~~
+예 : [내 블로그](https://khw11044.github.io/about.html)
+~~~
+
+> 🔍 **결과**
+
+[내 블로그](https://haileysunn.github.io/about.html)
+
+- 자동 링크  
+
+~~~
+예 : <https://khw11044.github.io/about.html>
+~~~
+
+> 🔍 **결과**  
+
+<https://haileysunn.github.io/about.html>
 
 
-## Credits
+### 9. 이미지
 
-<span>Photo by <a href="https://unsplash.com/@jjying?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">JJ Ying</a> on <a href="https://unsplash.com/?utm_source=unsplash&amp;utm_medium=referral&amp;utm_content=creditCopyText">Unsplash</a></span>
+이미지 크기 조절은 뒤에 {: width='400' height='400'}
 
-*[SERP]: Search Engine Results Page
+~~~
+![그림1](/assets/img/etc/markdownshow.jpg)
+![그림2](/assets/img/etc/markdownshow.jpg){: width="400" height="400"}
+~~~
+
+> 🔍 **결과**
+
+![그림1](/assets/img/logo.png)
+![그림2](/assets/img/logo.png){: width="400" height="400"}
+
+### 10. 줄바꿈
+
+마크다운에서는 엔터를 한번친다고 줄바꿈이 일어나지 않는다.  
+
+줄 바꿈시 사용
+줄 바꿈시 사용
+
+1. ```<br>``` 사용
+
+~~~
+줄 바꿈시 사용 <br>
+줄 바꿈시 사용
+~~~
+
+> 🔍 **결과**
+
+줄 바꿈시 사용 <br>
+줄 바꿈시 사용
+
+2. Enter 2번
+
+~~~
+줄 바꿈시 사용  
+
+
+줄 바꿈시 사용
+~~~
+
+>  🔍 **결과**
+
+줄 바꿈시 사용  
+
+
+줄 바꿈시 사용
+
+3. 스페이스바 2번
+
+~~~
+줄 바꿈시 사용    
+줄 바꿈시 사용
+~~~
+
+> 🔍 **결과**
+
+줄 바꿈시 사용    
+줄 바꿈시 사용
+
+
+### 11. 표
+
+~~~
+| ------ | NumPy | PyTorch |
+| ------ | -------- | ---------- |
+| 선언 | np.array() | torch.FloatTensor, <br/> torch.Tensor()|
+| 차원 확인 | .ndim | .dim()|
+| 크기 확인 | .shape | .size()|
+~~~
+
+> 🔍 **결과**
+
+|1|2|3|
+|--|--|--|
+
+
+
+### 12. Expander control
+
+마크다운에서 접기/펼치기 가능한 컨트롤 문법  
+마크다운 자체에는 기능이 없고 html을 이용 --> html의 details 사용
+
+~~~html
+<details>
+<summary>접기/펼치기 버튼</summary>
+<div markdown="1">
+
+|제목|내용|
+|--|--|
+|1|1|
+|2|10|
+
+</div>
+</details>
+~~~
+
+> 🔍 **결과**
+
+<details>
+<summary>접기/펼치기 버튼</summary>
+<div markdown="1">
+
+|제목|내용|
+|--|--|
+|1|1|
+|2|10|
+
+</div>
+</details>
+
+~~~html
+<details>
+<blockquote>
+    숨김숨김
+</blockquote>
+</details>
+~~~
+
+> 🔍 **결과**
+
+
+### 13. 이모지
+
+1. 'Window 키' + ';' 또는 'Window 키' + '.'
+
+2. 복붙 🔗 <http://www.iemoji.com/> 📝✏️✒️💡 🧰 🙋🏻‍♂️
+
+> 🔍 **결과**
+
+😊
+
+### 14. 수학수식
+
+[더 자세한 수학수식 사용법](https://khw11044.github.io/blog/blog-etc/2020-12-21-markdown-tutorial2/)
+
+
+~~~
+$$x + y = 1$$
+~~~
+
+> 🔍 **결과**
+
+$$x + y = 1$$
+
+<kbd> hello </kbd>
+
+<a> hello </a>
+
+<code> hello </code>
+
+<mark> hello </mark>
+
+<under> hello </under>
