@@ -2,7 +2,7 @@
 layout: list
 category: study
 bigtitle: C
-slug: c
+slug: clanguage
 description: >
   C언어 자료
 

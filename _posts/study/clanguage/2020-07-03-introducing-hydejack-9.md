@@ -9,6 +9,7 @@ description: >
 sitemap: false
 categories:
  - study
+ - clanguage
 ---
 
 Version 9 is the most complete version of Hydejack yet.
