@@ -43,8 +43,7 @@
         </div>
       {% unless no_link_title %}</a>{% endunless %}
       {% assign alt = '' %}
-    {% endif %}{% endunless %}
-
+    {% endif %}{% endunless %}<br>
     {% include components/message.html text=post.description hide=hide_description alt=alt %}
    
   </header>
