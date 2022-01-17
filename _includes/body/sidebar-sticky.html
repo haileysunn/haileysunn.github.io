@@ -6,13 +6,17 @@
     </a>
     {% endif %}
 
-    <div class="sidebar-about" style="margin-bottom: 10px;">
+    <div class="sidebar-about" style="margin-bottom: 40px;">
 
         <!--블로그타이틀-->
-        <div class="sidebartitle" style="margin-bottom: 70px;">
+        <div class="sidebartitle" style="margin-bottom: 10px;">
             <a class="sidebar-title" href="{{ '/' | relative_url }}">
                 <h2 class="h1">{{ site.short_title | default:site.title }}</h2>
             </a>
+        </div>
+        <!-- 블로그 조회수 -->
+        <div style="text-align:center; margin-bottom: 15px;">
+            <a href="https://hits.seeyoufarm.com"><img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fhaileysunn.github.io&count_bg=%23AEAEAE&title_bg=%237B6880&icon=&icon_color=%23000000&title=%EC%A1%B0%ED%9A%8C%EC%88%98&edge_flat=false"/></a>
         </div>
         <!--블로그 간단한 설명-->
         {% assign text = site.tagline | default:site.description %}
@@ -24,7 +28,6 @@
         {% endif %}
     </div>
     
-    <!--블로그 조회수-->
     <nav class="sidebar-nav heading" role="navigation">
         {% include body/nav.html %}
     </nav>
@@ -35,4 +38,5 @@
         {% include components/social.html author=author %}
     </div>
 
+    
 </div>

@@ -490,7 +490,7 @@ $$x + y = 1$$
 
 ### 16. youtube
 
-{% include youtubePlayer.html id="EVx0htVYEiM" %}
+{% include components/youtubePlayer.html id="EVx0htVYEiM" %}
 
 ### 17. slick
 

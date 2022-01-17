@@ -73,6 +73,12 @@
 .content a:not(.btn):not(.no-hover){
   text-decoration-color: rgba(100,20,120,0.5);
   text-underline-offset: 0.22rem;
+  border-color:#666666;
+}
+
+.content a:not(.btn):not(.no-hover):hover {
+  text-decoration-color:#d6afe2;
+  border-color:#d6afe2;
 }
 
 code{
@@ -81,14 +87,14 @@ code{
   border-radius: 5px;
 }
 
-pre > code {
-  font-size: 1.1em !important;
+pre > code {font-size: 1.1em !important;
 }
 
 .highlight {
   color: rgb(107, 107, 107) !important;
   background-color: rgb(223, 230, 232);
 }
+
 .markdown-body {
   kbd {
     font-family: monospace;
@@ -123,6 +129,105 @@ pre > code {
     margin: auto;
 }
 
-.utterances {
-  margin-left: 10px;
+//prev,next post
+
+.page-control {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-control > div {
+  max-width: 50%;
+}
+
+.page-control {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.page-control > div {
+  max-width: 50%;
+}
+
+.button {
+  box-shadow:inset 0px 1px 0px 0px #ffffff;
+  background:linear-gradient(to bottom, #ffffff 5%, #f6f6f6 100%);
+  background-color:#ffffff;
+  border-radius:16px;
+  border:3px solid #986fa5 ;
+  display:inline-block;
+  cursor:pointer;
+  color:#666666;
+  font-family:Arial;
+  font-size:18px;
+  font-weight:bold;
+  padding:7px 100px 2px 100px;
+  text-decoration:none;
+  text-shadow:0px 1px 0px #ffffff;
+}
+
+.button:hover {
+  background:linear-gradient(to bottom, #f6f6f6 5%, #ffffff 100%);
+  background-color:#f6f6f6;
+}
+
+.button:active {
+  position:relative;
+  top:1px;
+}
+
+//sidebar-tooltip
+
+// 메뉴
+.spread-btn{
+  right: 15%;
+  position: absolute;
+  padding: 0;
+  padding-top: 2px;
+  border: none;
+  background: none;
+  color: white;
+  cursor: pointer;
+  z-index: 1;
+}
+.menu-wrapper {
+  text-align: left;
+  margin-left: 30%;
+}
+.submenu.menu-wrapper{
+  right: 10%;
+  position: absolute;
+  background-color: rgb(34,31,32);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  width: 10rem;
+  z-index: 2;
+  ul{
+    margin: 0;
+    padding: 0 1.25rem;
+  }
+}
+.submenu.menu-wrapper.hide{
+  display: none;
+}
+
+.submenu.menu-wrapper ul{
+  margin: 3px 0px;
+}
+
+.submenu.menu-wrapper > ul > li > a {
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.submenu.menu-wrapper > ul > li > a:hover{
+  color:#986fa5;
+}
+
+a::after {
+  display: none !important;
 }
