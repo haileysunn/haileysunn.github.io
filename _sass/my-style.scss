@@ -228,6 +228,6 @@ pre > code {font-size: 1.1em !important;
   color:#986fa5;
 }
 
-a::after {
+a.external::after, a::after {
   display: none !important;
 }
