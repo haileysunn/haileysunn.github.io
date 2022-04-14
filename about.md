@@ -36,10 +36,8 @@ hide_description: true
     
 ## Project
 ---
-* **Project_01**
-* **Project_02**
-* **Project_03**
-* **Project_04**
+* **2014 웹 프로그래밍 기말 프로젝트**
+* **...**
 
 ## Awards
 ---
