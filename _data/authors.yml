@@ -7,9 +7,8 @@ author1:
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
-  about:             |
-    𝐻𝒶𝒾𝓁𝑒𝓎 𝒮𝓊𝓃<br>
-    ᴊᴀᴠᴀ・ᴄ#・ᴠʙ・ʀᴘᴀ<br>
+  about:
+    ᴊᴀᴠᴀ・ᴄ#・ᴠʙᴀ・ʀᴘᴀ<br>
     일본 생활 4년차 마무리<br>
     <br>
     Please check my [CV](/assets/cv.pdf)
